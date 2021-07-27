@@ -10,10 +10,44 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header>
-  </header>
-  <main>
-  </main>
+  <div class="master-container">
+
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-full justify-center black-background white-text">
+            <h1>got jokes?</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container width-height gray-background">
+        <div class="row justify-center align-center height-90">
+
+
+          <div data-view="generate-joke">
+            <button class="joke-button">Click Here for Jokes!</button>
+          </div>
+
+          <div data-view="jokes" class="hidden joke-container">
+            <div class="sub-container margin-top-50">
+              <div class="border height width padding-20">
+                <div class="row">
+                  <div class="col-half">
+                    <div class="text-bubble"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+  </div>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
 </body>
