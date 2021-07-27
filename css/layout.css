@@ -8,6 +8,11 @@
   flex-wrap: wrap;
 }
 
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .col-full {
   width: 100%;
 }
