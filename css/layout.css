@@ -1,0 +1,35 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.col-half {
+  width: 50%;
+}
+
+.width-30 {
+  width: 70%;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 100%;
+  }
+
+  .col-half {
+    width: 50%;
+  }
+
+  .width-30 {
+    width: 30%;
+  }
+}

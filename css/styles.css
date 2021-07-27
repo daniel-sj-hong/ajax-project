@@ -1,0 +1,48 @@
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+.black-background {
+  background-color: black;
+}
+
+.white-text {
+  color: white;
+}
+
+.gray-background {
+  background-color: #dcdfe3;
+}
+
+.border {
+  border: 1px black solid;
+  border-radius: 10px;
+}
+
+.height-100 {
+  height: 100vh;
+}
+
+.height-50 {
+  height: 80%;
+}
+
+.jokes {
+  width: 100vw;
+  height: 100vh;
+}
+
+.joke-button {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #0b81ff;
+  color: white;
+  font-size: 20px;
+}
