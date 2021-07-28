@@ -28,7 +28,7 @@
   height: 90vh;
 }
 
-.width-height {
+.width-height-100 {
   width: 100vw;
   height: 100vh;
 }
@@ -64,4 +64,13 @@
   background-color: #c2c9d3;
   border-radius: 15px;
   padding: 5px 15px;
+}
+
+.punchline-button {
+  border: none;
+  border-radius: 10px;
+  padding: 5px 25px;
+  background-color: #0b81ff;
+  color: white;
+  font-size: 20px;
 }
