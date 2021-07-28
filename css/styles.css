@@ -80,3 +80,7 @@
   color: white;
   font-size: 20px;
 }
+
+.punchline-button:hover {
+  cursor: pointer;
+}
