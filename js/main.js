@@ -2,6 +2,7 @@ var $jokeButton = document.querySelector('.joke-button');
 var $jokeContainer = document.querySelector('.joke-container');
 var $punchButton = document.querySelector('.punchline-button');
 var $ajaxTarget = document.querySelector('.ajax-target');
+var $targetColumn = document.querySelector('.target-column');
 
 $jokeButton.addEventListener('click', handleJoke);
 $punchButton.addEventListener('click', handlePunch);
@@ -26,7 +27,7 @@ function getJoke() {
 
 function handleJoke(event) {
   $jokeContainer.className = 'joke-container';
-  $jokeButton.className = 'hidden';
+  $targetColumn.className = 'hidden';
   $punchButton.className = 'punchline-button';
   getJoke();
 }
