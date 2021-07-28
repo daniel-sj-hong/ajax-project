@@ -1,7 +1,7 @@
 var $jokeButton = document.querySelector('.joke-button');
 var $jokeContainer = document.querySelector('.joke-container');
 var $textBubble = document.querySelector('.text-bubble');
-var $punchButton = document.querySelector('.punch-button');
+var $punchButton = document.querySelector('.punchline-button');
 
 $jokeButton.addEventListener('click', handleJoke);
 
@@ -21,5 +21,6 @@ function getJoke() {
 function handleJoke(event) {
   $jokeContainer.className = 'joke-container';
   $jokeButton.className = 'hidden';
+  $punchButton.className = 'punchline-button';
   getJoke();
 }
