@@ -24,13 +24,8 @@
   background-color: #dcdfe3;
 }
 
-.height-90 {
-  height: 90vh;
-}
-
-.width-height {
-  width: 100vw;
-  height: 100vh;
+.margin-bottom-20 {
+  margin-bottom: 20px;
 }
 
 .joke-button {
@@ -52,8 +47,12 @@
   background-color: white;
 }
 
-.margin-top-50 {
-  margin-top: 50px;
+.margin-top-30 {
+  margin-top: 30px;
+}
+
+.height-50vh {
+  height: 50vh;
 }
 
 .padding-20 {
@@ -63,5 +62,20 @@
 .text-bubble {
   background-color: #c2c9d3;
   border-radius: 15px;
-  padding: 5px 15px;
+  padding: 15px;
+  max-width: 300px;
+  display: inline-block;
+}
+
+.punchline-button {
+  border: none;
+  border-radius: 10px;
+  padding: 5px 25px;
+  background-color: #0b81ff;
+  color: white;
+  font-size: 20px;
+}
+
+.punchline-button:hover {
+  cursor: pointer;
 }
