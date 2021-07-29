@@ -79,3 +79,36 @@
 .punchline-button:hover {
   cursor: pointer;
 }
+
+.justify-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.align-end {
+  display: flex;
+  align-items: center;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+}
+
+.more-jokes-button {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #0b81ff;
+  font-size: 15px;
+  color: white;
+}
+
+.more-jokes-button:hover {
+  cursor: pointer;
+}
