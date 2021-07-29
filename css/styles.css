@@ -94,11 +94,6 @@
   justify-content: flex-end;
 }
 
-.align-end {
-  display: flex;
-  align-items: center;
-}
-
 .position-relative {
   position: relative;
 }
