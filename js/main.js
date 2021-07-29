@@ -4,7 +4,6 @@ var $punchButton = document.querySelector('.punchline-button');
 var $jokeTarget = document.querySelector('.joke-target');
 var $targetColumn = document.querySelector('.target-column');
 var $moreJokesButton = document.querySelector('.more-jokes-button');
-var $reactionTarget = document.querySelector('.reaction-target');
 
 $jokeButton.addEventListener('click', handleJoke);
 $punchButton.addEventListener('click', handlePunch);
@@ -53,13 +52,6 @@ function handleMoreJokes(event) {
   getJoke();
   $moreJokesButton.className = 'hidden';
   $punchButton.className = 'punchline-button';
-  // var $div = document.createElement('div');
-  // $reactionTarget.appendChild($div);
-  // var $p = document.createElement('p');
-  // $p.setAttribute('class', 'blue-text-bubble');
-  // $p.setAttribute('class', 'justify-end');
-  // $p.textContent = 'More Jokes!';
-  // $jokeTarget.appendChild($p);
   var $divRow = document.createElement('div');
   $divRow.setAttribute('class', 'row');
   $jokeTarget.appendChild($divRow);
