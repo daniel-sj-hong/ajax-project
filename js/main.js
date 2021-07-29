@@ -35,12 +35,18 @@ function handleJoke(event) {
 }
 
 function handlePunch(event) {
-  if (data.punchline !== '') {
-    var $div = document.createElement('div');
-    $ajaxTarget.appendChild($div);
-    var $p = document.createElement('p');
-    $p.setAttribute('class', 'text-bubble');
-    $p.textContent = data.punchline;
-    $div.appendChild($p);
-  }
+  var $div = document.createElement('div');
+  $ajaxTarget.appendChild($div);
+  var $p = document.createElement('p');
+  $p.setAttribute('class', 'text-bubble');
+  $p.textContent = data.punchline;
+  $div.appendChild($p);
+  $punchButton.className = 'hidden';
+  $moreJokesButton.className = 'more-jokes-button';
+}
+
+function handleMoreJokes(event) {
+  getJoke();
+  $moreJokesButton.className = 'hidden';
+  $punchButton.className = 'punchline-button';
 }
