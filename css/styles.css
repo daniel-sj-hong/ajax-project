@@ -123,11 +123,19 @@
   background-color: #0b81ff;
 }
 
+.laughing-emoji:hover {
+  cursor: pointer;
+}
+
 .snooze-emoji {
   padding: 5px 10px;
   border: none;
   border-radius: 10px;
   background-color: #0b81ff;
+}
+
+.snooze-emoji:hover {
+  cursor: pointer;
 }
 
 .margin-right-20 {
