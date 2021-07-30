@@ -48,7 +48,7 @@
 }
 
 .restrict-height {
-  max-height: 90%;
+  max-height: 100%;
   overflow: scroll;
 }
 
@@ -103,12 +103,6 @@
   position: relative;
 }
 
-.position-fixed {
-  position: fixed;
-  top: 37em;
-  right: 25em;
-}
-
 .more-jokes-button {
   padding: 5px 15px;
   border: none;
@@ -134,4 +128,8 @@
   border: none;
   border-radius: 10px;
   background-color: #0b81ff;
+}
+
+.margin-right-20 {
+  margin-right: 20px;
 }

@@ -29,6 +29,12 @@
   height: 600px;
 }
 
+.position-fixed {
+  position: fixed;
+  top: 42em;
+  right: 3em;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     width: 100%;
@@ -44,5 +50,11 @@
 
   .height {
     height: 600px;
+  }
+
+  .position-fixed {
+    position: fixed;
+    top: 41em;
+    right: 47em;
   }
 }

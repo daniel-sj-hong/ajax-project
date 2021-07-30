@@ -47,8 +47,8 @@ function handleJoke(event) {
 function handlePunch(event) {
   $punchButton.className = 'hidden';
   $moreJokesButton.className = 'more-jokes-button';
-  $snoozeEmoji.className = 'snooze-emoji';
-  $laughingEmoji.className = 'laughing-emoji';
+  $snoozeEmoji.className = 'snooze-emoji margin-right-20';
+  $laughingEmoji.className = 'laughing-emoji margin-right-20';
   var $div = document.createElement('div');
   $jokeTarget.appendChild($div);
   var $p = document.createElement('p');
