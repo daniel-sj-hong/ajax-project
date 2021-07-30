@@ -1,5 +1,6 @@
 /* exported data */
 var data = {
   joke: '',
-  punchline: ''
+  punchline: '',
+  saved: []
 };

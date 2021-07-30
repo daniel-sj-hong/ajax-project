@@ -10,7 +10,8 @@ var $snoozeEmoji = document.querySelector('.snooze-emoji');
 $jokeButton.addEventListener('click', handleJoke);
 $punchButton.addEventListener('click', handlePunch);
 $moreJokesButton.addEventListener('click', handleMoreJokes);
-// $laughingEmoji.addEventListener('click')
+$laughingEmoji.addEventListener('click', handleLaugh);
+$snoozeEmoji.addEventListener('click', handleSnooze);
 
 function getJoke() {
   var xhr = new XMLHttpRequest();
@@ -19,12 +20,15 @@ function getJoke() {
   xhr.addEventListener('load', function () {
     data.joke = xhr.response.setup;
     data.punchline = xhr.response.punchline;
+
     var $divRow = document.createElement('div');
     $divRow.setAttribute('class', 'row');
     $jokeTarget.appendChild($divRow);
+
     var $divColumn = document.createElement('div');
     $divColumn.setAttribute('class', 'col-half');
     $divRow.appendChild($divColumn);
+
     var $p = document.createElement('p');
     $p.setAttribute('class', 'gray-text-bubble');
     $p.textContent = data.joke;
@@ -41,20 +45,65 @@ function handleJoke(event) {
 }
 
 function handlePunch(event) {
+  $punchButton.className = 'hidden';
+  $moreJokesButton.className = 'more-jokes-button';
+  $snoozeEmoji.className = 'snooze-emoji';
+  $laughingEmoji.className = 'laughing-emoji';
   var $div = document.createElement('div');
   $jokeTarget.appendChild($div);
   var $p = document.createElement('p');
   $p.setAttribute('class', 'gray-text-bubble');
   $p.textContent = data.punchline;
   $div.appendChild($p);
-  $punchButton.className = 'hidden';
-  $moreJokesButton.className = 'more-jokes-button';
 }
 
 function handleMoreJokes(event) {
   getJoke();
   $moreJokesButton.className = 'hidden';
   $punchButton.className = 'punchline-button';
+  $laughingEmoji.className = 'hidden';
+  $snoozeEmoji.className = 'hidden';
+  var $divRow = document.createElement('div');
+  $divRow.setAttribute('class', 'row');
+  $jokeTarget.appendChild($divRow);
+
+  var $divColumn = document.createElement('div');
+  $divColumn.setAttribute('class', 'col-full justify-end');
+  $divRow.appendChild($divColumn);
+
+  var $p = document.createElement('p');
+  $p.setAttribute('class', 'blue-text-bubble');
+  $p.textContent = 'More Jokes!';
+  $divColumn.appendChild($p);
+}
+
+function handleLaugh(event) {
+  $laughingEmoji.className = 'hidden';
+  $snoozeEmoji.className = 'hidden';
+
+  var $divRow = document.createElement('div');
+  $divRow.setAttribute('class', 'row');
+  $jokeTarget.appendChild($divRow);
+
+  var $divColumn = document.createElement('div');
+  $divColumn.setAttribute('class', 'col-full justify-end');
+  $divRow.appendChild($divColumn);
+
+  var $p = document.createElement('p');
+  $p.setAttribute('class', 'blue-text-bubble');
+  $p.textContent = '😂';
+  $divColumn.appendChild($p);
+  var savedJoke = {
+    joke: data.joke,
+    punchline: data.punchline
+  };
+  data.saved.push(savedJoke);
+}
+
+function handleSnooze(event) {
+  $laughingEmoji.className = 'hidden';
+  $snoozeEmoji.className = 'hidden';
+
   var $divRow = document.createElement('div');
   $divRow.setAttribute('class', 'row');
   $jokeTarget.appendChild($divRow);
@@ -63,6 +112,6 @@ function handleMoreJokes(event) {
   $divRow.appendChild($divColumn);
   var $p = document.createElement('p');
   $p.setAttribute('class', 'blue-text-bubble');
-  $p.textContent = 'More Jokes!';
+  $p.textContent = '😴';
   $divColumn.appendChild($p);
 }
