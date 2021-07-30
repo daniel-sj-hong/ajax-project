@@ -47,6 +47,11 @@
   background-color: white;
 }
 
+.restrict-height {
+  max-height: 90%;
+  overflow: scroll;
+}
+
 .margin-top-30 {
   margin-top: 30px;
 }
@@ -98,10 +103,10 @@
   position: relative;
 }
 
-.position-absolute {
-  position: absolute;
-  bottom: 20px;
-  right: 30px;
+.position-fixed {
+  position: fixed;
+  top: 37em;
+  right: 25em;
 }
 
 .more-jokes-button {
