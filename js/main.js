@@ -4,10 +4,13 @@ var $punchButton = document.querySelector('.punchline-button');
 var $jokeTarget = document.querySelector('.joke-target');
 var $targetColumn = document.querySelector('.target-column');
 var $moreJokesButton = document.querySelector('.more-jokes-button');
+// var $laughingEmoji = document.querySelector('.laughing-emoji');
+// var $snoozeEmoji = document.querySelector('.snooze-emoji');
 
 $jokeButton.addEventListener('click', handleJoke);
 $punchButton.addEventListener('click', handlePunch);
 $moreJokesButton.addEventListener('click', handleMoreJokes);
+// $laughingEmoji.addEventListener('click')
 
 function getJoke() {
   var xhr = new XMLHttpRequest();
