@@ -33,6 +33,7 @@ function getJoke() {
     $p.setAttribute('class', 'gray-text-bubble');
     $p.textContent = data.joke;
     $divColumn.appendChild($p);
+    scrollToBottom($jokeTarget);
   });
   xhr.send();
 }
@@ -49,12 +50,19 @@ function handlePunch(event) {
   $moreJokesButton.className = 'more-jokes-button';
   $snoozeEmoji.className = 'snooze-emoji margin-right-20';
   $laughingEmoji.className = 'laughing-emoji margin-right-20';
-  var $div = document.createElement('div');
-  $jokeTarget.appendChild($div);
+  var $divRow = document.createElement('div');
+  $divRow.setAttribute('class', 'row');
+  $jokeTarget.appendChild($divRow);
+
+  var $divColumn = document.createElement('div');
+  $divColumn.setAttribute('class', 'col-half');
+  $divRow.appendChild($divColumn);
+
   var $p = document.createElement('p');
   $p.setAttribute('class', 'gray-text-bubble');
   $p.textContent = data.punchline;
-  $div.appendChild($p);
+  $divColumn.appendChild($p);
+  scrollToBottom($jokeTarget);
 }
 
 function handleMoreJokes(event) {
@@ -75,6 +83,7 @@ function handleMoreJokes(event) {
   $p.setAttribute('class', 'blue-text-bubble');
   $p.textContent = 'More Jokes!';
   $divColumn.appendChild($p);
+  scrollToBottom($jokeTarget);
 }
 
 function handleLaugh(event) {
@@ -98,6 +107,7 @@ function handleLaugh(event) {
     punchline: data.punchline
   };
   data.saved.push(savedJoke);
+  scrollToBottom($jokeTarget);
 }
 
 function handleSnooze(event) {
@@ -114,4 +124,9 @@ function handleSnooze(event) {
   $p.setAttribute('class', 'blue-text-bubble');
   $p.textContent = '😴';
   $divColumn.appendChild($p);
+  scrollToBottom($jokeTarget);
+}
+
+function scrollToBottom(element) {
+  element.scrollTop = element.scrollHeight;
 }
