@@ -83,6 +83,7 @@
   padding: 15px;
   max-width: 300px;
   display: inline-block;
+  transition: all 1s ease-out;
 }
 
 .blue-text-bubble {
@@ -153,4 +154,13 @@
 
 .margin-right-20 {
   margin-right: 20px;
+}
+
+.collection-button {
+  border: none;
+  border-radius: 10px;
+  background-color: #ff4500;
+  color: white;
+  font-size: 15px;
+  padding: 10px 25px;
 }
