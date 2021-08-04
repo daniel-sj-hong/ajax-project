@@ -6,6 +6,7 @@ var $targetColumn = document.querySelector('.target-column');
 var $moreJokesButton = document.querySelector('.more-jokes-button');
 var $laughingEmoji = document.querySelector('.laughing-emoji');
 var $snoozeEmoji = document.querySelector('.snooze-emoji');
+var $collectionButton = document.querySelector('.collection-button');
 
 $jokeButton.addEventListener('click', handleJoke);
 $punchButton.addEventListener('click', handlePunch);
@@ -71,6 +72,8 @@ function handleMoreJokes(event) {
   $punchButton.className = 'punchline-button';
   $laughingEmoji.className = 'hidden';
   $snoozeEmoji.className = 'hidden';
+  $collectionButton.className = 'hidden';
+
   var $divRow = document.createElement('div');
   $divRow.setAttribute('class', 'row');
   $jokeTarget.appendChild($divRow);
@@ -89,6 +92,7 @@ function handleMoreJokes(event) {
 function handleLaugh(event) {
   $laughingEmoji.className = 'hidden';
   $snoozeEmoji.className = 'hidden';
+  $collectionButton.className = 'collection-button';
 
   var $divRow = document.createElement('div');
   $divRow.setAttribute('class', 'row');
@@ -113,6 +117,7 @@ function handleLaugh(event) {
 function handleSnooze(event) {
   $laughingEmoji.className = 'hidden';
   $snoozeEmoji.className = 'hidden';
+  $collectionButton.className = 'collection-button';
 
   var $divRow = document.createElement('div');
   $divRow.setAttribute('class', 'row');
