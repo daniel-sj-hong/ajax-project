@@ -83,7 +83,7 @@
   padding: 15px;
   max-width: 300px;
   display: inline-block;
-  transition: all 1s ease-out;
+  animation: slide-up 0.5s ease;
 }
 
 .blue-text-bubble {
@@ -93,6 +93,7 @@
   max-width: 300px;
   display: inline-block;
   color: white;
+  animation: slide-up 1s ease;
 }
 
 .punchline-button {
@@ -163,4 +164,18 @@
   color: white;
   font-size: 15px;
   padding: 10px 25px;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.laughing-collection {
+  font-size: 50px;
 }

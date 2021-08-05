@@ -19,6 +19,8 @@
 
 .col-half {
   width: 50%;
+  transition-duration: 2s;
+  transition-property: width;
 }
 
 .width {
