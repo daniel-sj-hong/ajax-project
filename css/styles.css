@@ -83,6 +83,7 @@
   padding: 15px;
   max-width: 300px;
   display: inline-block;
+  animation: slide-up 0.5s ease;
 }
 
 .blue-text-bubble {
@@ -92,6 +93,7 @@
   max-width: 300px;
   display: inline-block;
   color: white;
+  animation: slide-up 1s ease;
 }
 
 .punchline-button {
@@ -114,6 +116,20 @@
 
 .position-relative {
   position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-bottom-right {
+  bottom: 10px;
+  right: 10px;
+}
+
+.position-bottom-left {
+  bottom: 10px;
+  left: 10px;
 }
 
 .more-jokes-button {
@@ -153,4 +169,44 @@
 
 .margin-right-20 {
   margin-right: 20px;
+}
+
+.collection-button {
+  border: none;
+  border-radius: 10px;
+  background-color: #ff4500;
+  color: white;
+  font-size: 15px;
+  padding: 10px 25px;
+}
+
+.collection-button:hover {
+  cursor: pointer;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.big-laughing-emoji {
+  font-size: 50px;
+}
+
+.back-to-jokes-button {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #0b81ff;
+  font-size: 15px;
+  color: white;
+}
+
+.back-to-jokes-button:hover {
+  cursor: pointer;
 }

@@ -19,6 +19,8 @@
 
 .col-half {
   width: 50%;
+  transition-duration: 2s;
+  transition-property: width;
 }
 
 .width {
@@ -27,15 +29,6 @@
 
 .height {
   height: 600px;
-}
-
-.position-absolute {
-  position: absolute;
-}
-
-.position-bottom-right {
-  bottom: 10px;
-  right: 10px;
 }
 
 @media screen and (min-width: 768px) {

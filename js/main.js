@@ -6,12 +6,17 @@ var $targetColumn = document.querySelector('.target-column');
 var $moreJokesButton = document.querySelector('.more-jokes-button');
 var $laughingEmoji = document.querySelector('.laughing-emoji');
 var $snoozeEmoji = document.querySelector('.snooze-emoji');
+var $collectionButton = document.querySelector('.collection-button');
+var $backToJokesButton = document.querySelector('.back-to-jokes-button');
+var $bigLaughingEmoji = document.querySelector('.big-laughing-emoji');
 
 $jokeButton.addEventListener('click', handleJoke);
 $punchButton.addEventListener('click', handlePunch);
 $moreJokesButton.addEventListener('click', handleMoreJokes);
 $laughingEmoji.addEventListener('click', handleLaugh);
 $snoozeEmoji.addEventListener('click', handleSnooze);
+$collectionButton.addEventListener('click', handleCollection);
+$backToJokesButton.addEventListener('click', handleBackToJokes);
 
 function getJoke() {
   var xhr = new XMLHttpRequest();
@@ -71,6 +76,8 @@ function handleMoreJokes(event) {
   $punchButton.className = 'punchline-button';
   $laughingEmoji.className = 'hidden';
   $snoozeEmoji.className = 'hidden';
+  $collectionButton.className = 'hidden';
+
   var $divRow = document.createElement('div');
   $divRow.setAttribute('class', 'row');
   $jokeTarget.appendChild($divRow);
@@ -89,6 +96,7 @@ function handleMoreJokes(event) {
 function handleLaugh(event) {
   $laughingEmoji.className = 'hidden';
   $snoozeEmoji.className = 'hidden';
+  $collectionButton.className = 'collection-button';
 
   var $divRow = document.createElement('div');
   $divRow.setAttribute('class', 'row');
@@ -113,6 +121,7 @@ function handleLaugh(event) {
 function handleSnooze(event) {
   $laughingEmoji.className = 'hidden';
   $snoozeEmoji.className = 'hidden';
+  $collectionButton.className = 'collection-button';
 
   var $divRow = document.createElement('div');
   $divRow.setAttribute('class', 'row');
@@ -129,4 +138,53 @@ function handleSnooze(event) {
 
 function scrollToBottom(element) {
   element.scrollTop = element.scrollHeight;
+}
+
+function handleCollection(event) {
+  $backToJokesButton.className = 'back-to-jokes-button';
+  $moreJokesButton.className = 'hidden';
+  $collectionButton.className = 'hidden';
+  $bigLaughingEmoji.className = 'big-laughing-emoji justify-center';
+  emptyElementContents($jokeTarget);
+  for (var i = 0; i < data.saved.length; i++) {
+    var $divRowOne = document.createElement('div');
+    $divRowOne.setAttribute('class', 'row');
+    $jokeTarget.appendChild($divRowOne);
+
+    var $divColumnOne = document.createElement('div');
+    $divColumnOne.setAttribute('class', 'col-half');
+    $divRowOne.appendChild($divColumnOne);
+
+    var $pOne = document.createElement('p');
+    $pOne.setAttribute('class', 'gray-text-bubble');
+    $pOne.textContent = data.saved[i].joke;
+    $divColumnOne.appendChild($pOne);
+
+    var $divRowTwo = document.createElement('div');
+    $divRowTwo.setAttribute('class', 'row');
+    $jokeTarget.appendChild($divRowTwo);
+
+    var $divColumnTwo = document.createElement('div');
+    $divColumnTwo.setAttribute('class', 'col-half');
+    $divRowTwo.appendChild($divColumnTwo);
+
+    var $pTwo = document.createElement('p');
+    $pTwo.setAttribute('class', 'gray-text-bubble');
+    $pTwo.textContent = data.saved[i].punchline;
+    $divColumnTwo.appendChild($pTwo);
+  }
+}
+
+function handleBackToJokes(event) {
+  emptyElementContents($jokeTarget);
+  $backToJokesButton.className = 'hidden';
+  $punchButton.className = 'punchline-button';
+  $bigLaughingEmoji.className = 'hidden';
+  getJoke();
+}
+
+function emptyElementContents(element) {
+  while (element.lastChild) {
+    element.removeChild(element.lastChild);
+  }
 }
