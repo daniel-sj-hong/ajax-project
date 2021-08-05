@@ -180,6 +180,10 @@
   padding: 10px 25px;
 }
 
+.collection-button:hover {
+  cursor: pointer;
+}
+
 @keyframes slide-up {
   0% {
     transform: translateY(20px);
@@ -201,4 +205,8 @@
   background-color: #0b81ff;
   font-size: 15px;
   color: white;
+}
+
+.back-to-jokes-button:hover {
+  cursor: pointer;
 }
