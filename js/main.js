@@ -8,6 +8,7 @@ var $laughingEmoji = document.querySelector('.laughing-emoji');
 var $snoozeEmoji = document.querySelector('.snooze-emoji');
 var $collectionButton = document.querySelector('.collection-button');
 var $backToJokesButton = document.querySelector('.back-to-jokes-button');
+var $bigLaughingEmoji = document.querySelector('.big-laughing-emoji');
 
 $jokeButton.addEventListener('click', handleJoke);
 $punchButton.addEventListener('click', handlePunch);
@@ -143,6 +144,7 @@ function handleCollection(event) {
   $backToJokesButton.className = 'back-to-jokes-button';
   $moreJokesButton.className = 'hidden';
   $collectionButton.className = 'hidden';
+  $bigLaughingEmoji.className = 'big-laughing-emoji justify-center';
   while ($jokeTarget.lastChild) {
     $jokeTarget.removeChild($jokeTarget.lastChild);
   }
@@ -181,5 +183,6 @@ function handleBackToJokes(event) {
   }
   $backToJokesButton.className = 'hidden';
   $punchButton.className = 'punchline-button';
+  $bigLaughingEmoji.className = 'hidden';
   getJoke();
 }
