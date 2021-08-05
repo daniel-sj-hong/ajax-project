@@ -7,6 +7,7 @@ var $moreJokesButton = document.querySelector('.more-jokes-button');
 var $laughingEmoji = document.querySelector('.laughing-emoji');
 var $snoozeEmoji = document.querySelector('.snooze-emoji');
 var $collectionButton = document.querySelector('.collection-button');
+var $backToJokesButton = document.querySelector('.back-to-jokes-button');
 
 $jokeButton.addEventListener('click', handleJoke);
 $punchButton.addEventListener('click', handlePunch);
@@ -138,6 +139,8 @@ function scrollToBottom(element) {
 }
 
 function handleCollection(event) {
+  $backToJokesButton.className = 'back-to-jokes-button';
+  $moreJokesButton.className = 'hidden';
   while ($jokeTarget.lastChild) {
     $jokeTarget.removeChild($jokeTarget.lastChild);
   }

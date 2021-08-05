@@ -118,6 +118,20 @@
   position: relative;
 }
 
+.position-absolute {
+  position: absolute;
+}
+
+.position-bottom-right {
+  bottom: 10px;
+  right: 10px;
+}
+
+.position-bottom-left {
+  bottom: 10px;
+  left: 10px;
+}
+
 .more-jokes-button {
   padding: 5px 15px;
   border: none;
@@ -178,4 +192,13 @@
 
 .laughing-collection {
   font-size: 50px;
+}
+
+.back-to-jokes-button {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #0b81ff;
+  font-size: 15px;
+  color: white;
 }
