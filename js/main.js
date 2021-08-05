@@ -15,6 +15,7 @@ $moreJokesButton.addEventListener('click', handleMoreJokes);
 $laughingEmoji.addEventListener('click', handleLaugh);
 $snoozeEmoji.addEventListener('click', handleSnooze);
 $collectionButton.addEventListener('click', handleCollection);
+$backToJokesButton.addEventListener('click', handleBackToJokes);
 
 function getJoke() {
   var xhr = new XMLHttpRequest();
@@ -141,6 +142,7 @@ function scrollToBottom(element) {
 function handleCollection(event) {
   $backToJokesButton.className = 'back-to-jokes-button';
   $moreJokesButton.className = 'hidden';
+  $collectionButton.className = 'hidden';
   while ($jokeTarget.lastChild) {
     $jokeTarget.removeChild($jokeTarget.lastChild);
   }
@@ -171,4 +173,13 @@ function handleCollection(event) {
     $pTwo.textContent = data.saved[i].punchline;
     $divColumnTwo.appendChild($pTwo);
   }
+}
+
+function handleBackToJokes(event) {
+  while ($jokeTarget.lastChild) {
+    $jokeTarget.removeChild($jokeTarget.lastChild);
+  }
+  $backToJokesButton.className = 'hidden';
+  $punchButton.className = 'punchline-button';
+  getJoke();
 }
