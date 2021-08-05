@@ -145,7 +145,7 @@ function handleCollection(event) {
   $moreJokesButton.className = 'hidden';
   $collectionButton.className = 'hidden';
   $bigLaughingEmoji.className = 'big-laughing-emoji justify-center';
-  destroy();
+  emptyElementContents($jokeTarget);
   for (var i = 0; i < data.saved.length; i++) {
     var $divRowOne = document.createElement('div');
     $divRowOne.setAttribute('class', 'row');
@@ -176,15 +176,15 @@ function handleCollection(event) {
 }
 
 function handleBackToJokes(event) {
-  destroy();
+  emptyElementContents($jokeTarget);
   $backToJokesButton.className = 'hidden';
   $punchButton.className = 'punchline-button';
   $bigLaughingEmoji.className = 'hidden';
   getJoke();
 }
 
-function destroy(event) {
-  while ($jokeTarget.lastChild) {
-    $jokeTarget.removeChild($jokeTarget.lastChild);
+function emptyElementContents(element) {
+  while (element.lastChild) {
+    element.removeChild(element.lastChild);
   }
 }
