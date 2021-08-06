@@ -9,6 +9,7 @@ var $snoozeEmoji = document.querySelector('.snooze-emoji');
 var $collectionButton = document.querySelector('.collection-button');
 var $backToJokesButton = document.querySelector('.back-to-jokes-button');
 var $bigLaughingEmoji = document.querySelector('.big-laughing-emoji');
+var $hourglass = document.querySelector('.lds-hourglass');
 
 $jokeButton.addEventListener('click', handleJoke);
 $punchButton.addEventListener('click', handlePunch);
@@ -22,6 +23,7 @@ function getJoke() {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', 'https://official-joke-api.appspot.com/random_joke');
   xhr.responseType = 'json';
+  $hourglass.className = 'lds-hourglass left';
   xhr.addEventListener('load', function () {
     data.joke = xhr.response.setup;
     data.punchline = xhr.response.punchline;
@@ -39,6 +41,7 @@ function getJoke() {
     $p.textContent = data.joke;
     $divColumn.appendChild($p);
     scrollToBottom($jokeTarget);
+    $hourglass.className = 'hidden';
   });
   xhr.send();
 }
