@@ -23,7 +23,7 @@ function getJoke() {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', 'https://official-joke-api.appspot.com/random_joke');
   xhr.responseType = 'json';
-  $hourglass.className = 'lds-hourglass left';
+  $hourglass.className = 'lds-hourglass left bottom';
   xhr.addEventListener('load', function () {
     data.joke = xhr.response.setup;
     data.punchline = xhr.response.punchline;
