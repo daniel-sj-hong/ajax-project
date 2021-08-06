@@ -76,9 +76,6 @@
   max-width: 300px;
   display: inline-block;
   animation: slide-up 0.5s ease;
-  box-shadow: 4px 7px 0 -1px rgba(214, 198, 198, 0.17);
-  -webkit-box-shadow: 4px 7px 0 -1px rgba(214, 198, 198, 0.17);
-  -moz-box-shadow: 4px 7px 0 -1px rgba(214, 198, 198, 0.17);
 }
 
 .blue-text-bubble {
@@ -89,9 +86,6 @@
   display: inline-block;
   color: white;
   animation: slide-up 1s ease;
-  box-shadow: 4px 7px 0 -1px rgba(214, 198, 198, 0.31);
-  -webkit-box-shadow: 4px 7px 0 -1px rgba(214, 198, 198, 0.31);
-  -moz-box-shadow: 4px 7px 0 -1px rgba(214, 198, 198, 0.31);
 }
 
 .punchline-button {
@@ -101,9 +95,6 @@
   background-color: #0b81ff;
   color: white;
   font-size: 20px;
-  box-shadow: 4px 7px 0 -1px rgba(214, 198, 198, 0.31);
-  -webkit-box-shadow: 4px 7px 0 -1px rgba(214, 198, 198, 0.31);
-  -moz-box-shadow: 4px 7px 0 -1px rgba(214, 198, 198, 0.31);
 }
 
 .punchline-button:hover {
@@ -149,9 +140,6 @@ button:hover {
   background-color: #0b81ff;
   font-size: 15px;
   color: white;
-  box-shadow: 4px 7px 0 -1px rgba(214, 198, 198, 0.31);
-  -webkit-box-shadow: 4px 7px 0 -1px rgba(214, 198, 198, 0.31);
-  -moz-box-shadow: 4px 7px 0 -1px rgba(214, 198, 198, 0.31);
 }
 
 .more-jokes-button:hover {
@@ -163,9 +151,6 @@ button:hover {
   border: none;
   border-radius: 10px;
   background-color: #0b81ff;
-  box-shadow: 4px 7px 0 -1px rgba(214, 198, 198, 0.31);
-  -webkit-box-shadow: 4px 7px 0 -1px rgba(214, 198, 198, 0.31);
-  -moz-box-shadow: 4px 7px 0 -1px rgba(214, 198, 198, 0.31);
 }
 
 .laughing-emoji:hover {
@@ -177,9 +162,6 @@ button:hover {
   border: none;
   border-radius: 10px;
   background-color: #0b81ff;
-  box-shadow: 4px 7px 0 -1px rgba(214, 198, 198, 0.31);
-  -webkit-box-shadow: 4px 7px 0 -1px rgba(214, 198, 198, 0.31);
-  -moz-box-shadow: 4px 7px 0 -1px rgba(214, 198, 198, 0.31);
 }
 
 .snooze-emoji:hover {
@@ -197,9 +179,6 @@ button:hover {
   color: white;
   font-size: 15px;
   padding: 10px 25px;
-  box-shadow: 4px 7px 0 -1px rgba(214, 198, 198, 0.31);
-  -webkit-box-shadow: 4px 7px 0 -1px rgba(214, 198, 198, 0.31);
-  -moz-box-shadow: 4px 7px 0 -1px rgba(214, 198, 198, 0.31);
 }
 
 .collection-button:hover {
@@ -227,6 +206,9 @@ button:hover {
   background-color: #0b81ff;
   font-size: 15px;
   color: white;
+}
+
+.message-shadow {
   box-shadow: 4px 7px 0 -1px rgba(214, 198, 198, 0.31);
   -webkit-box-shadow: 4px 7px 0 -1px rgba(214, 198, 198, 0.31);
   -moz-box-shadow: 4px 7px 0 -1px rgba(214, 198, 198, 0.31);

@@ -37,7 +37,7 @@ function getJoke() {
     $divRow.appendChild($divColumn);
 
     var $p = document.createElement('p');
-    $p.setAttribute('class', 'gray-text-bubble');
+    $p.setAttribute('class', 'gray-text-bubble message-shadow');
     $p.textContent = data.joke;
     $divColumn.appendChild($p);
     scrollToBottom($jokeTarget);
@@ -49,15 +49,15 @@ function getJoke() {
 function handleJoke(event) {
   $jokeContainer.className = 'joke-container margin-top-30';
   $targetColumn.className = 'hidden';
-  $punchButton.className = 'punchline-button';
+  $punchButton.className = 'punchline-button message-shadow';
   getJoke();
 }
 
 function handlePunch(event) {
   $punchButton.className = 'hidden';
-  $moreJokesButton.className = 'more-jokes-button';
-  $snoozeEmoji.className = 'snooze-emoji margin-right-20';
-  $laughingEmoji.className = 'laughing-emoji margin-right-20';
+  $moreJokesButton.className = 'more-jokes-button message-shadow';
+  $snoozeEmoji.className = 'snooze-emoji margin-right-20 message-shadow';
+  $laughingEmoji.className = 'laughing-emoji margin-right-20 message-shadow';
   var $divRow = document.createElement('div');
   $divRow.setAttribute('class', 'row');
   $jokeTarget.appendChild($divRow);
@@ -67,7 +67,7 @@ function handlePunch(event) {
   $divRow.appendChild($divColumn);
 
   var $p = document.createElement('p');
-  $p.setAttribute('class', 'gray-text-bubble');
+  $p.setAttribute('class', 'gray-text-bubble message-shadow');
   $p.textContent = data.punchline;
   $divColumn.appendChild($p);
   scrollToBottom($jokeTarget);
@@ -76,7 +76,7 @@ function handlePunch(event) {
 function handleMoreJokes(event) {
   getJoke();
   $moreJokesButton.className = 'hidden';
-  $punchButton.className = 'punchline-button';
+  $punchButton.className = 'punchline-button message-shadow';
   $laughingEmoji.className = 'hidden';
   $snoozeEmoji.className = 'hidden';
   $collectionButton.className = 'hidden';
@@ -90,7 +90,7 @@ function handleMoreJokes(event) {
   $divRow.appendChild($divColumn);
 
   var $p = document.createElement('p');
-  $p.setAttribute('class', 'blue-text-bubble');
+  $p.setAttribute('class', 'blue-text-bubble message-shadow');
   $p.textContent = 'More Jokes!';
   $divColumn.appendChild($p);
   scrollToBottom($jokeTarget);
@@ -99,7 +99,7 @@ function handleMoreJokes(event) {
 function handleLaugh(event) {
   $laughingEmoji.className = 'hidden';
   $snoozeEmoji.className = 'hidden';
-  $collectionButton.className = 'collection-button';
+  $collectionButton.className = 'collection-button message-shadow';
 
   var $divRow = document.createElement('div');
   $divRow.setAttribute('class', 'row');
@@ -110,7 +110,7 @@ function handleLaugh(event) {
   $divRow.appendChild($divColumn);
 
   var $p = document.createElement('p');
-  $p.setAttribute('class', 'blue-text-bubble');
+  $p.setAttribute('class', 'blue-text-bubble message-shadow');
   $p.textContent = '😂';
   $divColumn.appendChild($p);
   var savedJoke = {
@@ -124,7 +124,7 @@ function handleLaugh(event) {
 function handleSnooze(event) {
   $laughingEmoji.className = 'hidden';
   $snoozeEmoji.className = 'hidden';
-  $collectionButton.className = 'collection-button';
+  $collectionButton.className = 'collection-button message-shadow';
 
   var $divRow = document.createElement('div');
   $divRow.setAttribute('class', 'row');
@@ -133,7 +133,7 @@ function handleSnooze(event) {
   $divColumn.setAttribute('class', 'col-full justify-end');
   $divRow.appendChild($divColumn);
   var $p = document.createElement('p');
-  $p.setAttribute('class', 'blue-text-bubble');
+  $p.setAttribute('class', 'blue-text-bubble message-shadow');
   $p.textContent = '😴';
   $divColumn.appendChild($p);
   scrollToBottom($jokeTarget);
@@ -144,7 +144,7 @@ function scrollToBottom(element) {
 }
 
 function handleCollection(event) {
-  $backToJokesButton.className = 'back-to-jokes-button';
+  $backToJokesButton.className = 'back-to-jokes-button message-shadow';
   $moreJokesButton.className = 'hidden';
   $collectionButton.className = 'hidden';
   $bigLaughingEmoji.className = 'big-laughing-emoji justify-center';
@@ -159,7 +159,7 @@ function handleCollection(event) {
     $divRowOne.appendChild($divColumnOne);
 
     var $pOne = document.createElement('p');
-    $pOne.setAttribute('class', 'gray-text-bubble');
+    $pOne.setAttribute('class', 'gray-text-bubble message-shadow');
     $pOne.textContent = data.saved[i].joke;
     $divColumnOne.appendChild($pOne);
 
@@ -172,7 +172,7 @@ function handleCollection(event) {
     $divRowTwo.appendChild($divColumnTwo);
 
     var $pTwo = document.createElement('p');
-    $pTwo.setAttribute('class', 'gray-text-bubble');
+    $pTwo.setAttribute('class', 'gray-text-bubble message-shadow');
     $pTwo.textContent = data.saved[i].punchline;
     $divColumnTwo.appendChild($pTwo);
   }
@@ -181,7 +181,7 @@ function handleCollection(event) {
 function handleBackToJokes(event) {
   emptyElementContents($jokeTarget);
   $backToJokesButton.className = 'hidden';
-  $punchButton.className = 'punchline-button';
+  $punchButton.className = 'punchline-button message-shadow';
   $bigLaughingEmoji.className = 'hidden';
   getJoke();
 }
