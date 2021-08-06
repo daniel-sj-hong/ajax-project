@@ -16,10 +16,6 @@
   background-color: black;
 }
 
-.white-background {
-  background-color: white;
-}
-
 .white-text {
   color: white;
 }
@@ -30,10 +26,6 @@
 
 .margin-bottom-20 {
   margin-bottom: 20px;
-}
-
-.width-50 {
-  width: 22%;
 }
 
 .joke-button {
