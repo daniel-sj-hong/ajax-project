@@ -31,6 +31,14 @@
   height: 600px;
 }
 
+.left {
+  left: 9em;
+}
+
+.bottom {
+  bottom: 23em;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     width: 100%;
@@ -46,5 +54,13 @@
 
   .height {
     height: 600px;
+  }
+
+  .left {
+    left: 45em;
+  }
+
+  .bottom {
+    bottom: 23em;
   }
 }
