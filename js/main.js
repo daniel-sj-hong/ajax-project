@@ -21,7 +21,7 @@ $backToJokesButton.addEventListener('click', handleBackToJokes);
 
 function getJoke() {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'https://official-joke-api.appspot.com/random_joke');
+  xhr.open('GET', 'https://got-jokes-us.herokuapp.com/random_joke');
   xhr.responseType = 'json';
   $hourglass.className = 'lds-hourglass left bottom';
   xhr.addEventListener('load', function () {
@@ -42,6 +42,9 @@ function getJoke() {
     $divColumn.appendChild($p);
     scrollToBottom($jokeTarget);
     $hourglass.className = 'hidden';
+  });
+  xhr.addEventListener('error', err => {
+    console.error(err);
   });
   xhr.send();
 }
