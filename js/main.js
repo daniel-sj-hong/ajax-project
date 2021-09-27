@@ -10,6 +10,7 @@ const $collectionButton = document.querySelector('.collection-button');
 const $backToJokesButton = document.querySelector('.back-to-jokes-button');
 const $bigLaughingEmoji = document.querySelector('.big-laughing-emoji');
 const $hourglass = document.querySelector('.lds-hourglass');
+const $eventLog = document.querySelector('.event-log');
 
 $jokeButton.addEventListener('click', handleJoke);
 $punchButton.addEventListener('click', handlePunch);
@@ -24,6 +25,11 @@ function getJoke() {
   xhr.open('GET', 'https://got-jokes-us.herokuapp.com/random_joke');
   xhr.responseType = 'json';
   $hourglass.className = 'lds-hourglass left bottom';
+  xhr.onreadystatechange = () => {
+    if (xhr.status === 404) {
+      $eventLog.textContent = 'Sorry, there was an error connecting to the network! Please try again later.';
+    }
+  };
   xhr.addEventListener('load', function () {
     data.joke = xhr.response.setup;
     data.punchline = xhr.response.punchline;
@@ -40,17 +46,14 @@ function getJoke() {
     $p.setAttribute('class', 'gray-text-bubble message-shadow');
     $p.textContent = data.joke;
     $divColumn.appendChild($p);
-    scrollToBottom($jokeTarget);
     $hourglass.className = 'hidden';
-  });
-  xhr.addEventListener('error', err => {
-    console.error(err);
+    scrollToBottom($jokeTarget);
   });
   xhr.send();
 }
 
 function handleJoke(event) {
-  $jokeContainer.className = 'joke-container margin-top-30';
+  $jokeContainer.className = 'joke-container margin-top-30 negative-mb';
   $targetColumn.className = 'hidden';
   $punchButton.className = 'punchline-button message-shadow';
   getJoke();
