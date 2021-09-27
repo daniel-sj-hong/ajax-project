@@ -236,6 +236,10 @@ button:hover {
   animation: lds-hourglass 1.2s infinite;
 }
 
+.negative-mb {
+  margin-bottom: -40px;
+}
+
 @keyframes lds-hourglass {
   0% {
     transform: rotate(0);
