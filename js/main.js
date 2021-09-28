@@ -30,6 +30,9 @@ function getJoke() {
       $eventLog.textContent = 'Sorry, there was an error connecting to the network! Please try again later.';
     }
   };
+  xhr.addEventListener('error', err => {
+    console.error(err);
+  });
   xhr.addEventListener('load', function () {
     data.joke = xhr.response.setup;
     data.punchline = xhr.response.punchline;
