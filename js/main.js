@@ -24,7 +24,7 @@ function getJoke() {
   const xhr = new XMLHttpRequest();
   xhr.open('GET', 'https://got-jokes-us.herokuapp.com/random_joke');
   xhr.responseType = 'json';
-  $hourglass.className = 'lds-hourglass left bottom';
+  $hourglass.className = 'lds-hourglass';
   xhr.onreadystatechange = () => {
     if (xhr.status === 404) {
       $eventLog.textContent = 'Sorry, there was an error connecting to the network! Please try again later.';
