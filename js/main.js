@@ -27,11 +27,12 @@ function getJoke() {
   $hourglass.className = 'lds-hourglass';
   xhr.onreadystatechange = () => {
     if (xhr.status === 404) {
-      $eventLog.textContent = 'Sorry, there was an error connecting to the network! Please try again later.';
+      $eventLog.textContent = 'Sorry, server could not retrieve the requested data. Please try again later';
     }
   };
   xhr.addEventListener('error', err => {
     console.error(err);
+    $eventLog.textContent = 'Sorry, there was an error connecting to the network! Please trying again later';
   });
   xhr.addEventListener('load', function () {
     data.joke = xhr.response.setup;
