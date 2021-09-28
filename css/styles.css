@@ -219,8 +219,10 @@ button:hover {
 }
 
 .lds-hourglass {
-  display: inline-block;
-  position: fixed;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40%;
 }
 
 .lds-hourglass::after {
@@ -234,10 +236,6 @@ button:hover {
   border: 32px solid #0b81ff;
   border-color: #0b81ff transparent #0b81ff transparent;
   animation: lds-hourglass 1.2s infinite;
-}
-
-.negative-mb {
-  margin-bottom: -40px;
 }
 
 @keyframes lds-hourglass {
@@ -254,4 +252,8 @@ button:hover {
   100% {
     transform: rotate(1800deg);
   }
+}
+
+.negative-mb {
+  margin-bottom: -40px;
 }
