@@ -48,7 +48,7 @@
 }
 
 .restrict-height {
-  max-height: 90%;
+  max-height: 100%;
   overflow: scroll;
 }
 
@@ -95,6 +95,7 @@
   background-color: #0b81ff;
   color: white;
   font-size: 20px;
+  margin-top: 10px;
 }
 
 .punchline-button:hover {
@@ -252,8 +253,4 @@ button:hover {
   100% {
     transform: rotate(1800deg);
   }
-}
-
-.negative-mb {
-  margin-bottom: -40px;
 }
