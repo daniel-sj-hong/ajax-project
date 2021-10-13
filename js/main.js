@@ -120,7 +120,7 @@ function handleLaugh(event) {
   $divRow.appendChild($divColumn);
 
   const $p = document.createElement('p');
-  $p.setAttribute('class', 'blue-text-bubble message-shadow');
+  $p.setAttribute('class', 'blue-text-bubble message-shadow custom-font');
   $p.textContent = '😂';
   $divColumn.appendChild($p);
   const savedJoke = {
@@ -143,7 +143,7 @@ function handleSnooze(event) {
   $divColumn.setAttribute('class', 'col-full justify-end');
   $divRow.appendChild($divColumn);
   const $p = document.createElement('p');
-  $p.setAttribute('class', 'blue-text-bubble message-shadow');
+  $p.setAttribute('class', 'blue-text-bubble message-shadow custom-font');
   $p.textContent = '😴';
   $divColumn.appendChild($p);
   scrollToBottom($jokeTarget);
