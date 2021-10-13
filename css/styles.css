@@ -154,10 +154,6 @@ button:hover {
   background-color: #0b81ff;
 }
 
-.laughing-emoji:hover {
-  cursor: pointer;
-}
-
 .snooze-emoji {
   padding: 5px 10px;
   border: none;
@@ -165,6 +161,7 @@ button:hover {
   background-color: #0b81ff;
 }
 
+.laughing-emoji:hover,
 .snooze-emoji:hover {
   cursor: pointer;
 }
