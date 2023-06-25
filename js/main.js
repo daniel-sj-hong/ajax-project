@@ -22,7 +22,7 @@ $backToJokesButton.addEventListener('click', handleBackToJokes);
 
 function getJoke() {
   const xhr = new XMLHttpRequest();
-  xhr.open('GET', 'https://got-jokes-us.herokuapp.com/random_joke');
+  xhr.open('GET', 'https://official-joke-api.appspot.com/random_joke');
   xhr.responseType = 'json';
   $hourglass.className = 'lds-hourglass';
   xhr.onreadystatechange = () => {
